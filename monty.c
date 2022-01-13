@@ -46,8 +46,8 @@ void my_main(FILE *fd_monty)
 				{
 					f_monty(&gb_var.head, gb_var.linenumber);
 				}
-				if (gb_var.exit_code == EXIT_FAILURE)
-					free(gb_var.tokens[0]);
+				/*if (gb_var.exit_code == EXIT_FAILURE)*/
+					/*free(gb_var.tokens[0]);*/
 				free(gb_var.tokens);
 			}
 			gb_var.linenumber++;

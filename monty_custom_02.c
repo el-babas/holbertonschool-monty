@@ -44,3 +44,23 @@ void monty_pchar(stack_t **head, unsigned int linenumber)
 	}
 	printf("%c\n", (*head)->n);
 }
+
+/**
+ * monty_pstr - print the char value of the first element..
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_pstr(stack_t **head, unsigned int linenumber)
+{
+	stack_t *tmp;
+	(void)linenumber;
+
+	tmp = *head;
+
+	while (tmp && tmp->n > 0 && tmp->n < 128)
+	{
+		printf("%c", tmp->n);
+		tmp = tmp->next;
+	}
+	printf("\n");
+}

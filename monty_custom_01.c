@@ -24,7 +24,7 @@ void monty_sub(stack_t **head, unsigned int linenumber)
 {
 	if (my_nodesub(head) != 1)
 	{
-		fprintf(stderr, "L%u: can't add, stack too short\n", linenumber);
+		fprintf(stderr, "L%u: can't sub, stack too short\n", linenumber);
 		gb_var.exit_code = EXIT_FAILURE;
 		return;
 	}

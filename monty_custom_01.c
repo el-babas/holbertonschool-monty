@@ -14,3 +14,14 @@ void monty_add(stack_t **head, unsigned int linenumber)
 		return;
 	}
 }
+
+/**
+ * monty_nop - doesn’t do anything.
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_nop(stack_t **head, unsigned int linenumber)
+{
+	(void)head;
+	(void)linenumber;
+}

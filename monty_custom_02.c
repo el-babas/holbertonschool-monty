@@ -22,3 +22,25 @@ void monty_mod(stack_t **head, unsigned int linenumber)
 		return;
 	}
 }
+
+/**
+ * monty_pchar - print the char value of the first element..
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_pchar(stack_t **head, unsigned int linenumber)
+{
+	if (head == NULL || *head == NULL)
+	{
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+	if (isascii((*head)->n) == 0)
+	{
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+	printf("%c\n", (*head)->n);
+}

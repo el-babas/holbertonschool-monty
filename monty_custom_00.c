@@ -9,7 +9,7 @@ void monty_push(stack_t **head, unsigned int linenumber)
 {
 	int n, i;
 
-	if (gb_var.tokenumber != 2)
+	if (gb_var.tokenumber < 2)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", linenumber);
 		gb_var.exit_code = EXIT_FAILURE;

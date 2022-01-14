@@ -67,3 +67,18 @@ void monty_pint(stack_t **head, unsigned int linenumber)
 	}
 	printf("%d\n", (*head)->n);
 }
+
+/**
+ * monty_pop - removes the top element of the stack.
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_pop(stack_t **head, unsigned int linenumber)
+{
+	if (my_nodedel(head, 0) != 1)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+}

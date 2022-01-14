@@ -66,3 +66,42 @@ stack_t *my_nodeend(stack_t **head, const int n)
 		*head = new_node;
 	return (new_node);
 }
+
+/**
+ * my_nodedel - deletes the node at index index of a dlistint_t
+ * @head: list
+ * @index: position insert
+ *
+ * Return: 1 if it succeeded, -1 if it failed
+ */
+int my_nodedel(stack_t **head, unsigned int index)
+{
+	stack_t *tmp = *head;
+
+	if (tmp == NULL)
+		return (-1);
+	if (index == 0)
+	{
+		*head = tmp->next;
+		if (*head != NULL)
+			(*head)->prev = NULL;
+	}
+	else
+	{
+		while (tmp != NULL)
+		{
+			if (index == 0)
+				break;
+			index--;
+			tmp = tmp->next;
+		}
+		/* if it is not possible deleted the node */
+		if (tmp == NULL && index != 1)
+			return (-1);
+		tmp->prev->next = tmp->next;
+		if (tmp->next != NULL)
+			tmp->next->prev = tmp->prev;
+	}
+	free(tmp);
+	return (1);
+}

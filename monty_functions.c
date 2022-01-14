@@ -16,6 +16,7 @@ void (*my_getfunc(char *opcode))(stack_t **stack, unsigned int linenumber)
 		{"swap", monty_swap},
 		{"add", monty_add},
 		{"nop", monty_nop},
+		{"sub", monty_sub},
 		{NULL, NULL}
 	};
 

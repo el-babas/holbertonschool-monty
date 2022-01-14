@@ -16,6 +16,21 @@ void monty_add(stack_t **head, unsigned int linenumber)
 }
 
 /**
+ * monty_sub - adds the top two elements of the stack. (resta)
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_sub(stack_t **head, unsigned int linenumber)
+{
+	if (my_nodesub(head) != 1)
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+}
+
+/**
  * monty_nop - doesn’t do anything.
  * @head: linked list
  * @linenumber: line number

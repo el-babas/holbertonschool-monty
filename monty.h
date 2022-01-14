@@ -89,6 +89,7 @@ void my_nodefree(stack_t *head);
 stack_t *my_nodeadd(stack_t **head, const int n);
 stack_t *my_nodeend(stack_t **head, const int n);
 int my_nodedel(stack_t **head, unsigned int index);
+int my_nodeswp(stack_t **head);
 
 int my_strcmp(char *s1, char *s2);
 void my_trim(char **bf);
@@ -98,6 +99,7 @@ void monty_push(stack_t **head, unsigned int linenumber);
 void monty_pall(stack_t **head, unsigned int linenumber);
 void monty_pint(stack_t **head, unsigned int linenumber);
 void monty_pop(stack_t **head, unsigned int linenumber);
+void monty_swap(stack_t **head, unsigned int linenumber);
 
 /*************************************************************/
 #endif

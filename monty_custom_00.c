@@ -82,3 +82,18 @@ void monty_pop(stack_t **head, unsigned int linenumber)
 		return;
 	}
 }
+
+/**
+ * monty_swap - swaps the top two elements of the stack.
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_swap(stack_t **head, unsigned int linenumber)
+{
+	if (my_nodeswp(head) != 1)
+	{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+}

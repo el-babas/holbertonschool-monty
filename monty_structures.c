@@ -105,3 +105,32 @@ int my_nodedel(stack_t **head, unsigned int index)
 	free(tmp);
 	return (1);
 }
+
+/**
+ * my_nodeswp - swaps the top two elements of the stack
+ * @head: list
+ *
+ * Return: 1 if it succeeded, -1 if it failed
+ */
+int my_nodeswp(stack_t **head)
+{
+	int count = 0;
+	stack_t *tmp = NULL;
+
+	tmp = *head;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		count++;
+	}
+	if (count < 2)
+		return (-1);
+
+	tmp = *head;
+	*head = (*head)->next;
+	tmp->next = (*head)->next;
+	tmp->prev = *head;
+	(*head)->next = tmp;
+	(*head)->prev = NULL;
+	return (1);
+}

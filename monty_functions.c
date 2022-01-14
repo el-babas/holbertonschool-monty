@@ -13,6 +13,7 @@ void (*my_getfunc(char *opcode))(stack_t **stack, unsigned int linenumber)
 		{"pall", monty_pall},
 		{"pint", monty_pint},
 		{"pop", monty_pop},
+		{"swap", monty_swap},
 		{NULL, NULL}
 	};
 

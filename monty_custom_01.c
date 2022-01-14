@@ -31,6 +31,21 @@ void monty_sub(stack_t **head, unsigned int linenumber)
 }
 
 /**
+ * monty_mul - multiplique the top two elements of the stack.
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_mul(stack_t **head, unsigned int linenumber)
+{
+	if (my_nodemul(head) != 1)
+	{
+		fprintf(stderr, "L%u: can't mul, stack too short\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+}
+
+/**
  * monty_nop - doesn’t do anything.
  * @head: linked list
  * @linenumber: line number

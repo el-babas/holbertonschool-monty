@@ -17,7 +17,7 @@ void (*my_getfunc(char *opcode))(stack_t **stack, unsigned int linenumber)
 
 	for (i = 0; f_monty[i].opcode; i++)
 	{
-		if (my_strcmp(f_monty[i].opcode, opcode) == 0)
+		if (strcmp(f_monty[i].opcode, opcode) == 0)
 			break;
 	}
 

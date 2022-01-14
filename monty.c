@@ -32,9 +32,9 @@ void my_main(FILE *fd_monty)
 		if (nc != -1)
 		{
 			my_trim(&gb_var.buffer);
-			my_strtok();
-			if (gb_var.tokens[0] && gb_var.tokens[0][0] != '#')
+			if (strlen(gb_var.buffer) > 2 && gb_var.buffer[0] != '#')
 			{
+				my_strtok();
 				f_monty = my_getfunc(gb_var.tokens[0]);
 				if (f_monty == NULL)
 				{

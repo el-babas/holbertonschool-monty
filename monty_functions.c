@@ -11,6 +11,7 @@ void (*my_getfunc(char *opcode))(stack_t **stack, unsigned int linenumber)
 	instruction_t f_monty[] = {
 		{"push", monty_push},
 		{"pall", monty_pall},
+		{"pint", monty_pint},
 		{NULL, NULL}
 	};
 

@@ -95,6 +95,7 @@ void my_strtok(void);
 
 void monty_push(stack_t **head, unsigned int linenumber);
 void monty_pall(stack_t **head, unsigned int linenumber);
+void monty_pint(stack_t **head, unsigned int linenumber);
 
 /*************************************************************/
 #endif

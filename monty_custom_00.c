@@ -51,3 +51,19 @@ void monty_pall(stack_t **head, unsigned int linenumber)
 		tmp = tmp->next;
 	}
 }
+
+/**
+ * monty_pint - prints the value at the top of the stack
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_pint(stack_t **head, unsigned int linenumber)
+{
+	if ((*head) == NULL)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+	printf("%d\n", (*head)->n);
+}

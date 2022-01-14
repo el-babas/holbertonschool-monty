@@ -19,10 +19,8 @@ int my_nodesum(stack_t **head)
 	}
 	if (count < 2)
 		return (-1);
+
 	tmp = (*head)->next;
 	tmp->n += (*head)->n;
-	(*head) = (*head)->next;
-	free((*head)->prev);
-	(*head)->prev = NULL;
-	return (1);
+	return (my_nodedel(head, 0));
 }

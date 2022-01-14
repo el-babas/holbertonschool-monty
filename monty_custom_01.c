@@ -31,6 +31,29 @@ void monty_sub(stack_t **head, unsigned int linenumber)
 }
 
 /**
+ * monty_div - divide the top two elements of the stack.
+ * @head: linked list
+ * @linenumber: line number
+ */
+void monty_div(stack_t **head, unsigned int linenumber)
+{
+	int result = my_nodediv(head);
+
+	if (result == -1)
+	{
+		fprintf(stderr, "L%u: can't div, stack too short\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+	if (result == -2)
+	{
+		fprintf(stderr, "L%u: division by zero\n", linenumber);
+		gb_var.exit_code = EXIT_FAILURE;
+		return;
+	}
+}
+
+/**
  * monty_mul - multiplique the top two elements of the stack.
  * @head: linked list
  * @linenumber: line number

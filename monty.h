@@ -93,6 +93,7 @@ int my_nodeswp(stack_t **head);
 int my_nodesum(stack_t **head);
 int my_nodesub(stack_t **head);
 int my_nodemul(stack_t **head);
+int my_nodediv(stack_t **head);
 
 int my_strcmp(char *s1, char *s2);
 void my_trim(char **bf);
@@ -107,6 +108,7 @@ void monty_add(stack_t **head, unsigned int linenumber);
 void monty_nop(stack_t **head, unsigned int linenumber);
 void monty_sub(stack_t **head, unsigned int linenumber);
 void monty_mul(stack_t **head, unsigned int linenumber);
+void monty_div(stack_t **head, unsigned int linenumber);
 
 /*************************************************************/
 #endif
